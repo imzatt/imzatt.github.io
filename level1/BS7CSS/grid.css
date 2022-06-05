@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+    color: green;
+}
+
+div.gridone div,div.gridtwo div,div.gridthree div,div.gridfour div,div.gridfive div,div.gridsix div{
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+div.gridone,div.gridtwo,div.gridthree,div.gridfour,div.gridfive,div.gridsix {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+div.gridtwo{
+    grid-column-gap: 40px;
+}
+
+div.gridthree{
+    grid-row-gap: 30px;
+}
+
+div.gridfour{
+    grid-gap: 40px;
+    /* grid-column-gap: 40px;
+    grid-row-gap: 20px; */
+}
+
+.gridaddcolumns{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.gridaddrows{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
