@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'SourceSanPro_Regular';
+    src: url(../fonts/source/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'SourceSanPro_Light';
+    src: url(../fonts/source/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+    font-family: 'SourceSanPro_Bold';
+    src: url(../fonts/source/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'SourceSanPro_Black';
+    src: url(../fonts/source/SourceSansPro-Black.ttf);
+}
+
