@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    
+    <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return{
+                    feet:"",
+                    inches:"",
+                    pounds:"",
+                    result: "" ,
+                }
+            },
+            methods :{
+                calculate(){
+                    var weight = parseInt(this.pounds)*703;
+                    var height = parseInt(this.feet*12 + this.inches);
+                    var mix = parseInt(weight / height**2);
+                    this.result = mix;
+
+                    // event.preventDefault();
+                       
+                }
+            },
+        })
+    </script>
+</head>
+<body>
+    <div id="app">
+
+        <form action="" style="text-align: center;">
+
+            <h1>BMI Calculator</h1>
+
+            <label for="">Feets : </label>
+            <input type="number" v-model="feet">
+            
+            <label for=""> Inches : </label>
+            <input type="number" v-model="inches">
+            <br><br>
+            
+            <div class="lb">
+                <label for="">Pounds : </label>
+                <input type="number" v-model="pounds">
+            </div>
+
+            <br>
+            
+            <button @click="calculate" type="button">Calculate</button>
+
+            <div>
+                <p>And Your result is....</p>
+                <p>{{result}}</p>
+            </div>
+
+            <div V-If ="result<18.5 && result!=0"><p style="color: red;">Your're underweight!</p></div>
+            <div v-else-if="result>18.5 && result<25"><p style="color: green;">Your've normal weight!</p></div>
+            <div v-else-if="result>25 && result<30"><p style="color: rgb(114, 114, 29);">Your're Overweight!</p></div>
+            <div v-else-if="result>30"><p style="color: red;">Your're obesity!</p></div>
+
+            
+        </form>
+    </div>
+    
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+</body>
+</html>

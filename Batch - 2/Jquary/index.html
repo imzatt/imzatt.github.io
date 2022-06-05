@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ Introduction</title>
+    <!-- JQuery -->
+    <script src="jquery.min.js"></script>
+
+    <!-- Custom -->
+    <script src="custom.js"></script>
+
+    <script>
+        $(document).ready(function (){
+            var h2 = $("h2"); // element selector
+            console.log(h2)
+
+            var myp = $("#myp"); // ID
+            console.log(myp)
+
+            var article = $(".detail"); // Class
+            console.log(article)
+
+            var li = $("#content ul.techer li");
+            console.log(li)
+
+            $("button").click(function (){
+                alert('ok')
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <h2>Hello World!</h2>
+    <h2>Hello JQ!</h2>
+
+    <p id="myp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptate quaerat exercitationem a eum accusamus ullam officiis quo sunt error magnam voluptates laborum voluptatibus accusantium repellat, iste totam cum tempore ut unde! Veritatis dolor accusantium quaerat amet. Repellat animi modi, est nostrum totam possimus, dolor molestias magnam expedita, voluptatum libero tempore neque. Dolor ea porro labore quia quisquam impedit ipsum sunt ut ipsa. Impedit praesentium eos iure facilis porro accusantium quis dolores perferendis atque nulla. Ex blanditiis, aperiam asperiores expedita quaerat nesciunt earum animi, minima consectetur voluptatibus nemo voluptates facilis? Distinctio magnam quas repudiandae blanditiis vero! Aperiam sed illo dolore.
+    </p>
+
+    <article class="detail">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quia id voluptatum veritatis reiciendis sed officiis ducimus ex aut, enim a optio perspiciatis natus nostrum perferendis ullam pariatur, fuga nobis esse doloribus itaque est! Porro doloremque rem dolor nulla, a adipisci necessitatibus ipsa optio, accusamus quaerat saepe pariatur fugit! Quam.
+    </article>
+
+    <div class=""detail>
+        This is detail
+    </div>
+
+    <!-- #content ul.techer li -->
+    <div id="contents">
+    <ul class="techer">
+        <li>Hein</li>
+        <li>Kyaw</li>
+        <li>Wai</li>
+        <li>Thet</li>
+    </ul>
+
+    <ul>
+        <li>Mg Mg</li>
+        <li>Su Su</li>
+    </ul>
+    </div>
+
+    <form action="">
+        <input type="text" disabled readonly>
+    </form>
+
+    <!-- <div></div> 
+    <article></article> //content & blog
+    <section></section> //new -->
+
+    <button>Click</button>
+    
+</body>
+</html>
